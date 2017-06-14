@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e22c6e6f-4239-434f-9d04-0e0485cd5444" name="blood_bank" url="http://localhost:1234/">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\blood" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
