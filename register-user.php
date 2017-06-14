@@ -42,14 +42,6 @@ if (!isset($obj->{'user_name'})) {
                 'fcm_registration_token' => $fcm_registration_token
             ]);
 
-        /*{
-            "user_name": "'username",
-            "id": "'id2",
-            "password": "'password",
-            "blood_type": "'B",
-             "fcm_registration_token":"dAL9iAFlobA:APA91bHVRkwR4PgpXxDjDF_hkyTEz0dF4sn02uFT06egE-PB--tG7_x5iaTVJkFI7eJdpmPcXIQxq8VOC9H7PzZwPXDtlV_rVvN5-3jqjZb3C9jJ3mt0WjZjBvzciQtTQEWNX3jcjzWj"
-}*/
-
         print $insert_new_user;
 
         if ($insert_new_user) {

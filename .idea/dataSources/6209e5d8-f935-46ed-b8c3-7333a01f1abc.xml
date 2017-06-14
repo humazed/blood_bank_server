@@ -15,59 +15,49 @@
     <schema id="9" parent="1" name="test"/>
     <schema id="10" parent="1" name="testdb"/>
     <schema id="11" parent="1" name="test_db"/>
-    <table id="12" parent="2" name="tab_1"/>
+    <table id="12" parent="2" name="response"/>
     <table id="13" parent="2" name="users"/>
-    <column id="14" parent="12" name="c1">
+    <column id="14" parent="12" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="12" name="c2">
+    <column id="15" parent="12" name="response">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="16" parent="12" name="c3">
-      <Position>3</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="17" parent="12" name="c4">
-      <Position>4</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="18" parent="13" name="_id">
+    <column id="16" parent="13" name="_id">
       <Position>1</Position>
       <DataType>int(15)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="19" parent="13" name="user_name">
+    <column id="17" parent="13" name="user_name">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="13" name="id">
+    <column id="18" parent="13" name="id">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="13" name="password">
+    <column id="19" parent="13" name="password">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="13" name="blood_type">
+    <column id="20" parent="13" name="blood_type">
       <Position>5</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="13" name="fcm_registration_token">
+    <column id="21" parent="13" name="fcm_registration_token">
       <Position>6</Position>
       <DataType>varchar(300)|0</DataType>
     </column>
-    <key id="24" parent="13" name="PRIMARY">
+    <key id="22" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>_id</ColNames>
       <Primary>1</Primary>
