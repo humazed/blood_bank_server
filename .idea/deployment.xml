@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="blood_bank">
+  <component name="PublishConfigData" serverName="blood_bank" uploadOnCheckin="e719f516-0d75-42c7-914b-4a98ffc0701d">
     <serverData>
       <paths name="blood_bank">
         <serverdata>
@@ -18,5 +18,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="server" />
   </component>
 </project>

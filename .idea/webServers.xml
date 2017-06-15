@@ -6,7 +6,7 @@
         <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\blood" accessType="MOUNT" />
       </webServer>
       <webServer id="e719f516-0d75-42c7-914b-4a98ffc0701d" name="server" url="http://files.000webhost.com">
-        <fileTransfer host="files.000webhost.com" port="21">
+        <fileTransfer host="files.000webhost.com" port="21" rootFolder="/public_html">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>
