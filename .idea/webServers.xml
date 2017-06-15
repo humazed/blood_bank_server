@@ -5,6 +5,14 @@
       <webServer id="e22c6e6f-4239-434f-9d04-0e0485cd5444" name="blood_bank" url="http://localhost:1234/">
         <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\blood" accessType="MOUNT" />
       </webServer>
+      <webServer id="e719f516-0d75-42c7-914b-4a98ffc0701d" name="server" url="http://files.000webhost.com">
+        <fileTransfer host="files.000webhost.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
