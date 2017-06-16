@@ -75,7 +75,7 @@ $rows = $dbo->query($query);
 if ($rows->rowCount() > 0) {
 // mysqli_fetch_array will return a row of data from the query
 // until no further data is available
-    echo "\n\nid\tresponse\n\n";
+    echo "\n\n\tid\tresponse\n\n";
     foreach ($rows as $row) {
         echo "\t" . $row['id'];
         echo "\t" . $row['response'];
