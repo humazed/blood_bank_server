@@ -22,8 +22,8 @@ if (!isset($obj->{'response'})) {
 
     $insert_new_user = $db->insert('response',
         [
-            'response' => $response,
-            'id' => $id
+            'id' => $id,
+            'response' => $response
         ]);
 
 
