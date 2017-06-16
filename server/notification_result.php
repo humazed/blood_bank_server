@@ -77,27 +77,9 @@ if ($rows->rowCount() > 0) {
 // until no further data is available
     foreach ($rows as $row) {
         echo "   \t" . $row['response'];
+        echo "   \t" . $row['id'];
 //        echo $rows['id']."   \t" . $row['response'];
         echo "\n\n";
     }
 
 }
-//if ($rows->rowCount() > 0) {
-//    echo '<table align="left"
-//cellspacing="5" cellpadding="8">
-//
-//<tr><td align="left"><b>ID</b></td>
-//<td align="left"><b>response </b></td></tr>';
-//
-//// mysqli_fetch_array will return a row of data from the query
-//// until no further data is available
-//    foreach ($rows as $row) {
-//        echo '<tr><td align="left">' .
-//            $row['id'] . '</td><td align="left">' .
-//            $row['response'] . '</td>';
-//
-//        echo '</tr>';
-//    }
-//
-//    echo '</table>';
-//}
