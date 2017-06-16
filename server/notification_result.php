@@ -2,8 +2,8 @@
 include 'DB.php';
 
 
-DEFINE('DB_USER', 'root');
-DEFINE('DB_PASSWORD', 'root');
+DEFINE('DB_USER', 'id1966039_root');
+DEFINE('DB_PASSWORD', 'rootroot');
 
 
 // get content input and create json object to parse it
@@ -59,7 +59,8 @@ if (!isset($obj->{'response'})) {
 //    echo $response;
 }
 
-$dbo = new PDO('mysql:host=localhost;dbname=blood_bank;charset=utf8mb4', DB_USER, DB_PASSWORD);
+$dbo = new PDO('mysql:host=localhost;dbname=id1966039_blood_bank;charset=utf8mb4',
+    DB_USER, DB_PASSWORD);
 
 // Create a query for the database
 $query = "SELECT id,response FROM response";
