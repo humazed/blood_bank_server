@@ -18,10 +18,12 @@ if (!isset($obj->{'response'})) {
     print "{\"status\":0,\"message\":\"response is Missing !\"}";
 } else {
     $response = $obj->{'response'};
+    $id = $obj->{'id1'};
 
     $insert_new_user = $db->insert('response',
         [
             'response' => $response,
+            'id' => $id
         ]);
 
 
