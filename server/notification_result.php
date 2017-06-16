@@ -35,30 +35,28 @@ if (!isset($obj->{'response'})) {
         print '{"status":0,"message":"Error Registering User"}';
     }
 
-    $rows = $db->table('response')
-        ->select('id,response')
-        ->get()->toArray();
-
-    echo '<table align="left"
-cellspacing="5" cellpadding="8">
-
-<tr><td align="left"><b>id</b></td>
-<td align="left"><b>response</b></td></tr>';
-
-// mysqli_fetch_array will return a row of data from the query
-// until no further data is available
-    foreach ($rows as $row) {
-        echo '<tr><td align="left">' .
-            $row['id'] . '</td><td align="left">' .
-            $row['response'] . '</td>';
-
-        echo '</tr>';
-    }
-
-    echo '</table>';
-
-
-    echo $response;
+//    $rows = $db->table('response')
+//        ->select('id,response')
+//        ->get()->toArray();
+//
+//    echo '<table align="left"
+//cellspacing="5" cellpadding="8">
+//
+//<tr><td align="left"><b>id</b></td>
+//<td align="left"><b>response</b></td></tr>';
+//
+//// mysqli_fetch_array will return a row of data from the query
+//// until no further data is available
+//    foreach ($rows as $row) {
+//        echo '<tr><td align="left">' .
+//            $row['id'] . '</td><td align="left">' .
+//            $row['response'] . '</td>';
+//
+//        echo '</tr>';
+//    }
+//
+//    echo '</table>';
+//    echo $response;
 }
 
 $dbo = new PDO('mysql:host=localhost;dbname=id1966039_blood_bank;charset=utf8mb4',
@@ -73,34 +71,31 @@ $rows = $dbo->query($query);
 
 // If the query executed properly proceed
 if ($rows->rowCount() > 0) {
-//    echo "\n\nID \t response\n\n";
-//    echo "\n\n123456 \t accepted\n\n";
-
 
 // mysqli_fetch_array will return a row of data from the query
 // until no further data is available
-//    foreach ($rows as $row) {
-//        echo "   \t" . $row['response'];
-//        echo "\n\n";
-//    }
-//
-//}
-//if ($rows->rowCount() > 0) {
-//    echo '<table align="left"
-//cellspacing="5" cellpadding="8">
-//
-//<tr><td align="left"><b>ID</b></td>
-//<td align="left"><b>response </b></td></tr>';
-//
-//// mysqli_fetch_array will return a row of data from the query
-//// until no further data is available
-//    foreach ($rows as $row) {
-//        echo '<tr><td align="left">' .
-//            $row['id'] . '</td><td align="left">' .
-//            $row['response'] . '</td>';
-//
-//        echo '</tr>';
-//    }
-//
-//    echo '</table>';
+    foreach ($rows as $row) {
+        echo "   \t" . $row['response'];
+        echo "\n\n";
+    }
+
+}
+if ($rows->rowCount() > 0) {
+    echo '<table align="left"
+cellspacing="5" cellpadding="8">
+
+<tr><td align="left"><b>ID</b></td>
+<td align="left"><b>response </b></td></tr>';
+
+// mysqli_fetch_array will return a row of data from the query
+// until no further data is available
+    foreach ($rows as $row) {
+        echo '<tr><td align="left">' .
+            $row['id'] . '</td><td align="left">' .
+            $row['response'] . '</td>';
+
+        echo '</tr>';
+    }
+
+    echo '</table>';
 }
