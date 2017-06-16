@@ -16,6 +16,8 @@ header('Content-Type: application/json');
 // check if data sent and available from
 if (!isset($obj->{'response'})) {
     print "{\"status\":0,\"message\":\"response is Missing !\"}";
+} elseif (!isset($obj->{'id'})) {
+    print "{\"status\":0,\"message\":\"id is Missing !\"}";
 } else {
     $response = $obj->{'response'};
     $id = $obj->{'id'};
