@@ -76,7 +76,8 @@ if ($rows->rowCount() > 0) {
 // mysqli_fetch_array will return a row of data from the query
 // until no further data is available
     foreach ($rows as $row) {
-        echo $rows['id'] . "   \t" . $row['response'];
+        echo "   \t" . $row['response'];
+//        echo $rows['id']."   \t" . $row['response'];
         echo "\n\n";
     }
 
