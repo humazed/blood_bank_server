@@ -75,10 +75,10 @@ $rows = $dbo->query($query);
 if ($rows->rowCount() > 0) {
 // mysqli_fetch_array will return a row of data from the query
 // until no further data is available
+    echo "id\tresponse\n\n";
     foreach ($rows as $row) {
-        echo "   \t" . $row['response'];
-        echo "   \t" . $row['id'];
-//        echo $rows['id']."   \t" . $row['response'];
+        echo "\t" . $row['id'];
+        echo "\t" . $row['response'];
         echo "\n\n";
     }
 
