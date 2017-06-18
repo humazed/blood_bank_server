@@ -6,37 +6,29 @@ include 'DB.php';
 #API access key from Google API's Console
 define('API_ACCESS_KEY', 'AAAAZ5yL7yo:APA91bGxn3PJ1s2x6csFuNfbUzGv_M-aqILZXquhh-QVZRAa50mFuXZ0fSrCaLRbYZobf5wyQyj7y7lbUzQ830OxsqO_Xvs_h0qfQ_0TuhiR5j880cjgO4shvr4YtPxlngRfX8xIycuv');
 
-$id = $_GET['id'];
+$blood_type = $_GET['blood_type'];
 $title = $_GET['title'];
 $message = $_GET['message'];
 
-
 $db = DB::getInstance();
 
-$fcm_registration_token = $db->table('users')
-    ->where('id', '=', $id)
-    ->select('fcm_registration_token')
-    ->get()->first()->{'fcm_registration_token'};;
-
 #prep the bundle
-$msg = array
-(
+$msg = [
     'body' => $message,
-    'title' => $title,
-);
+    'title' => $title
+];
 
-$fields = array
-(
-    'to' => $fcm_registration_token,
-    'notification' => $msg
-);
+$fields = [
+    'to' => "/topics/$blood_type",
+    'priority' => 'high',
+    'data' => $msg
+];
 
 
-$headers = array
-(
+$headers = [
     'Authorization: key=' . API_ACCESS_KEY,
     'Content-Type: application/json'
-);
+];
 
 #Send Reponse To FireBase Server
 $ch = curl_init();

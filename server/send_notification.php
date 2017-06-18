@@ -19,27 +19,23 @@ $fcm_registration_token = $db->table('users')
     ->get()->first()->{'fcm_registration_token'};;
 
 
-//$registrationIds = "dAL9iAFlobA:APA91bHVRkwR4PgpXxDjDF_hkyTEz0dF4sn02uFT06egE-PB--tG7_x5iaTVJkFI7eJdpmPcXIQxq8VOC9H7PzZwPXDtlV_rVvN5-3jqjZb3C9jJ3mt0WjZjBvzciQtTQEWNX3jcjzWj";
-
 #prep the bundle
-$msg = array
-(
+$msg = [
     'body' => $message,
     'title' => $title
-);
+];
 
-$fields = array
-(
+$fields = [
     'to' => $fcm_registration_token,
+    'priority' => 'high',
     'data' => $msg
-);
+];
 
 
-$headers = array
-(
+$headers = [
     'Authorization: key=' . API_ACCESS_KEY,
     'Content-Type: application/json'
-);
+];
 
 #Send Reponse To FireBase Server
 $ch = curl_init();
