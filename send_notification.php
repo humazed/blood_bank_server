@@ -2,7 +2,6 @@
 include 'DB.php';
 // get content input and create json object to parse it
 
-
 #API access key from Google API's Console
 define('API_ACCESS_KEY', 'AAAAZ5yL7yo:APA91bGxn3PJ1s2x6csFuNfbUzGv_M-aqILZXquhh-QVZRAa50mFuXZ0fSrCaLRbYZobf5wyQyj7y7lbUzQ830OxsqO_Xvs_h0qfQ_0TuhiR5j880cjgO4shvr4YtPxlngRfX8xIycuv');
 
