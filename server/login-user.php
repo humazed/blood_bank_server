@@ -9,26 +9,31 @@ $db = DB::getInstance();
 header('Content-Type: application/json');
 // check if id and password sent from client
 if (!isset($obj->{'id'})) {
-    print "{\"status\":0,\"message\":\"id is Missing !\"}";
+    print /** @lang JSON */
+        '{"status":0,"message":"id is Missing !"}';
 } else if (!isset($obj->{'password'})) {
-    print "{\"status\":0,\"message\":\"Password is Missing !\"}";
+    print /** @lang JSON */
+        '{"status":0,"message":"Password is Missing !"}';
 } else {
     // store user name and password in variables
     $userid = $obj->{'id'};
     $userpassword = $obj->{'password'};
     // make query using marei db 
-    $check_id_password = $db->table('users')
+    $user = $db->table('users')
         ->where('id', '=', $userid)
         ->where("password", "=", $userpassword)
-        ->select('_id,user_name, id')
+        ->select('_id, user_name, id, blood_type')
         ->get()->first();
 
     // check count of found results
     if ($db->getCount() > 0) {
-        print "{\"status\":1,\"message\":\"Welcome !\",\"user\":$check_id_password}";
+        print /** @lang JSON */
+            "{\"status\":1,\"message\":\"Welcome !\",\"user\":$user}";
+//            '{"status":1,"message":"Welcome !","user":"usa"}';
 
     } else {
-        print "{\"status\":0,\"message\":\"Error in id or Password\",\"user\":null}";
+        print /** @lang JSON */
+            '{"status":0,"message":"Error in id or Password","user":null}';
     }
 }
 

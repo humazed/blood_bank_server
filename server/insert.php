@@ -13,24 +13,24 @@ $blood_type = 'B';
 
 echo "hello   ";
 
-$reg = $db->table('users')
-    ->where('id', '=', '\'id2')
-    ->select('fcm_registration_token')
-    ->get()->first()->{'fcm_registration_token'};
-
-echo $reg;
-
-
-
-//$check_email_password = $db->table('users')
-//    ->where('email', '=', 'usaa@fff.com')
-//    ->where("password", "=", 'pass')
-//    ->select('_id,user_name, email')
-//    ->get()->first();
+//$reg = $db->table('users')
+//    ->where('id', '=', '\'id2')
+//    ->select('fcm_registration_token')
+//    ->get()->first()->{'fcm_registration_token'};
 //
-//echo $check_email_password;
-//
-//echo $db->getCount();
+//echo $reg;
+
+
+
+$check_email_password = $db->table('users')
+    ->where('id', '=', '003')
+    ->where("password", "=", 'pass')
+    ->select('_id,user_name, id')
+    ->get()->first();
+
+echo $check_email_password;
+
+echo $db->getCount();
 
 
 
