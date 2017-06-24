@@ -10,6 +10,11 @@ $blood_type = $_GET['blood_type'];
 $title = $_GET['title'];
 $message = $_GET['message'];
 
+// strip out all whitespace
+$blood_type = preg_replace('/\s*/', '', $blood_type);
+// convert the string to all lowercase
+$blood_type = strtolower($blood_type);
+
 $db = DB::getInstance();
 
 #prep the bundle
